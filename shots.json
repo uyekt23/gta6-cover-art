@@ -1,0 +1,26 @@
+[
+  {
+    "h": 1080,
+    "name": "1-cover.jpg",
+    "query": "?shot=cover&layout=star&grade=sunset&caption=Vice%20Sunset&sub=Leonida%20Nights&size=sq",
+    "w": 1080
+  },
+  {
+    "h": 720,
+    "name": "2-editor.jpg",
+    "query": "?shot=editor&layout=grid&grade=neon&caption=Neon%20Boulevard&sub=Pier%20After%20Dark&size=sq",
+    "w": 1280
+  },
+  {
+    "h": 1280,
+    "name": "3-cover.jpg",
+    "query": "?shot=cover&layout=diagonal&grade=neon&caption=Neon%20Boulevard&sub=Pier%20After%20Dark&size=portrait",
+    "w": 1024
+  },
+  {
+    "name": "4-cover.jpg",
+    "query": "?shot=cover&layout=grid&grade=golden&caption=Golden%20Pier&sub=One%20Last%20Score&size=wide",
+    "w": 1280,
+    "h": 720
+  }
+]
