@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PosterForge — GTA-Style Cover Art Maker</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app" id="app">
+  <section class="controls" id="controls">
+    <h1>POSTER<span>FORGE</span></h1>
+    <p class="tag">Your photos → striking multi-panel cover art. Drag photos in, pick a layout, export a PNG. Everything stays on your machine.</p>
+
+    <div class="drop" id="drop">Drop photos here or
+      <label class="filebtn">Browse… <input id="photo" type="file" accept="image/*" multiple hidden></label>
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+
+    <label>Layout
+      <select id="layout"></select>
+    </label>
+    <label>Colour grade
+      <select id="grade"></select>
+    </label>
+    <label>Photo mode
+      <select id="mode">
+        <option value="multi">Different photo per panel</option>
+        <option value="single">One photo spans all panels</option>
+      </select>
+    </label>
+
+    <fieldset>
+      <legend>Selected panel</legend>
+      <label>Panel <select id="panel"></select></label>
+      <label>Photo for panel <select id="panelPhoto"></select></label>
+      <label>Zoom <input id="zoom" type="range" min="1" max="2.6" step="0.01" value="1"></label>
+      <label>Shift X <input id="shiftX" type="range" min="-1" max="1" step="0.01" value="0"></label>
+      <label>Shift Y <input id="shiftY" type="range" min="-1" max="1" step="0.01" value="0"></label>
+      <p class="hint">Tip: drag directly on the preview to position the selected panel's photo.</p>
+    </fieldset>
+
+    <label>Title <input id="caption" type="text" maxlength="42" value="VICE SUNSET"></label>
+    <label>Bottom line <input id="sub" type="text" maxlength="42" value="LEONIDA NIGHTS"></label>
+    <div class="row">
+      <label>Title size <input id="titleSize" type="range" min="0.6" max="1.4" step="0.02" value="1"></label>
+    </div>
+    <div class="row">
+      <label>Fill <input id="titleColor" type="color" value="#ffffff"></label>
+      <label>Outline <input id="outlineColor" type="color" value="#160a24"></label>
+    </div>
+    <div class="checks">
+      <label><input id="posterise" type="checkbox" checked> Posterise / duotone</label>
+      <label><input id="grain" type="checkbox" checked> Grain</label>
+      <label><input id="vignette" type="checkbox" checked> Vignette</label>
+      <label><input id="showSafe" type="checkbox"> Title-safe guide</label>
+    </div>
+
+    <label>Export size
+      <select id="size"></select>
+    </label>
+    <div class="row">
+      <button id="surprise" type="button" class="ghost">🎲 Surprise me</button>
+      <button id="export" type="button">Export PNG</button>
+    </div>
+    <p id="status" role="status"></p>
+  </section>
+  <section class="stage">
+    <canvas id="cover" width="1080" height="1080" aria-label="Cover preview"></canvas>
+    <p class="hint" id="sizeHint">Preview renders the chosen export size exactly.</p>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
