@@ -14,7 +14,7 @@ An offline web app that turns your own photos into striking GTA-style cover art:
 {run}
 ```
 
-Run the maker itself with `node serve.ts`, then open http://localhost:8080 — it works with the network off. Hand the entry in with `mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts`, which copies `app/` and `screenshots/` to `out/` and writes `out/dossier.json`.
+Run the maker itself with `node serve.ts`, then open http://localhost:8080 — it works with the network off. Hand the entry in with `mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts`, which copies `app/` and `screenshots/` to `out/` and writes `out/dossier.json`. Screenshots are taken using serve.ts + shots.json, which serve the app locally and define the screenshot sizes and views to capture.
 
 ---
 
